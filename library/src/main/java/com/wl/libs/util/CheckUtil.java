@@ -52,4 +52,18 @@ public class CheckUtil {
 
         return re;
     }
+
+    /**
+     * 校验车牌号码
+     *
+     * @author wanglei
+     * @date 16/7/5 08:34
+     */
+    public static boolean checkCarNo(String carNo) {
+        String carNoRegular = "^[\\u4e00-\\u9fa5]{1}[a-z_A-Z]{1}[a-z_A-Z_0-9]{5}$";
+        Pattern pattern = Pattern.compile(carNoRegular);
+        Matcher matcher = pattern.matcher(carNo);
+        boolean re = matcher.matches();
+        return re;
+    }
 }
