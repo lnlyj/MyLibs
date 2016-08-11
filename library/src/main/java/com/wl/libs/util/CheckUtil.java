@@ -15,7 +15,7 @@ public class CheckUtil {
      * @date 16/7/1 10:55
      */
     public static boolean checkPhoneNum(String phone) {
-        String phone_regular_expressions = "^[0-9]{11}$";
+        String phone_regular_expressions = "^1[0-9]{10}$";
         Pattern pattern = Pattern.compile(phone_regular_expressions);
         Matcher matcher = pattern.matcher(phone);
         boolean re = matcher.matches();
